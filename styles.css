@@ -1,0 +1,278 @@
+:root {
+    --FondoGris: rgb(220, 220, 220);
+    --color-black: rgb(43, 43, 43);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --Sombras: 0 4px 4px rgba(0, 0, 0, 0.2);
+    --asideBackground-blue: to bottom, rgb(203, 220, 255), rgb(158, 191, 255), rgb(124, 168, 255);
+    --marginMin: 10px;
+    --borderGeneral: 10px;
+}
+
+@media (max-width: 750px) {
+    .aside__content-image img {
+        display: none;
+    }
+
+    aside {
+        display: flex;
+        align-items: center;
+    }
+
+    .aside__content {
+        font-size: medium;
+        display: flex;
+        align-items: center;
+    }
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    
+    height: 100%;
+}
+.lf-body{
+    background-color: var(--FondoGris);
+}
+
+/*BARRA DE NAVEGACION*/
+nav {
+    padding-left: 1em;
+    padding-right: 1em;
+    color: white;
+    background-color: var(--color-black);
+}
+
+header {
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    margin-top: 0;
+}
+.lf-navbarElements{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 50px;
+}
+.nav__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav__ul {
+    display: flex;
+}
+
+.nav__ul-li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.nav__ul-li a:hover {
+    color: rgb(241, 241, 241);
+}
+
+.nav__ul-li {
+    list-style: none;
+    margin-left: 4em;
+}
+
+/*CONTENIDO PRINCIPAL*/
+.contenido {
+    display: flex;
+    padding-top: 100px;
+    margin-left: var(--marginMin);
+    margin-right: var(--marginMin);
+    margin-bottom: 50px;
+}
+
+/*ASIDE*/
+aside {
+    margin-left: var(--marginMin);
+    margin-right: var(--marginMin);
+    background-image: linear-gradient(var(--asideBackground-blue));
+    border-radius: var(--borderGeneral);
+    box-shadow: var(--Sombras);
+    color: white;
+    min-height: 500px;
+}
+
+.aside__content {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    align-items: center;
+    margin-top: 10%;
+}
+
+.aside__content img {
+    width: 300px;
+}
+
+/*MAIN*/
+main {
+    margin-left: var(--marginMin);
+    margin-right: var(--marginMin);
+    background-color: white;
+    border-radius: var(--borderGeneral);
+    box-shadow: var(--Sombras);
+    padding: 1em;
+}
+
+/*FOOTER*/
+footer {
+    background-color: var(--color-black);
+    color: white;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.fixed {
+    position: fixed;
+}
+
+.relative {
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+.footer__logo {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__logo img {
+    transition: .2s;
+    width: 50px;
+    height: 50px;
+}
+
+.boton:hover {
+    width: 45px;
+    height: 45px;
+    transition: .2s;
+}
+
+@media (max-width: 465px){
+    .aside-imagen{
+        display: none;
+    }
+    .horarios {
+        justify-content: center;
+        align-items: center;
+        
+    }
+}
+
+/*----HORARIOS----*/
+/*CONTENIDO*/
+.horarios {
+    justify-content: center;
+    align-items: center;
+}
+
+tr {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+    gap: 10px;
+}
+
+/*----CONTACTO----*/
+/*MAIN*/
+.formulario {
+    justify-content: center;
+}
+
+.contacto__form {
+    width: max-content;
+    padding-right: 200px;
+}
+
+.contacto__form h2 {
+    margin-bottom: 40px;
+}
+
+.contacto__form form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.contacto__form .textbox {
+    width: 280px;
+    height: 40px;
+    margin-bottom: 10px;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    border-bottom: 1px solid grey;
+    outline: 0;
+}
+
+.form__genero {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.form__comentario {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form__comentario textarea {
+    margin-top: 10px;
+    max-width: 300px;
+    min-width: 300px;
+    max-height: 150px;
+    min-height: 150px;
+}
+
+.form__botones {
+    margin-top: 10px;
+    display: flex;
+    gap: 20px;
+}
+
+.form__botones input {
+    width: 100px;
+    height: 40px;
+    border: transparent;
+}
+
+#submitButton {
+    background-color: rgb(124, 168, 255);
+    border: transparent;
+    color: white;
+    font-weight: bolder;
+}
+
+#submitButton:hover {
+    transition: .2s;
+    background-color: rgb(93, 147, 255);
+}
+
+#resetButton:hover {
+    transition: .2s;
+    background-color: rgb(220, 220, 220);
+}
